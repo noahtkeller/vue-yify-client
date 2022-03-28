@@ -1,0 +1,60 @@
+{
+  "name": "@noahtkeller/vue-yify-client",
+  "version": "0.1.0",
+  "description": "Vue video streaming client, backed by YIFY torrents and powered by WebTorrent.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahtkeller/vue-yify-client.git"
+  },
+  "main": "src/main",
+  "homepage": "https://github.com/noahtkeller/vue-yify-client",
+  "bugs": "https://github.com/noahtkeller/vue-yify-client/issues",
+  "author": {
+    "name": "Noah Keller",
+    "email": "noahtkeller@gmail.com",
+    "url": "https://noahtkeller.dev/"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve src/dev.js",
+    "build": "vue-cli-service build --target lib --name yify src/main.js",
+    "lint": "vue-cli-service lint"
+  },
+  "exports": {
+    ".": "src/main.js",
+    "./components/torrent-search": "./src/components/TorrentSearch.vue"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@material/elevation": "^13.0.0",
+    "@mdi/font": "5.9.55",
+    "@noahtkeller/md-theme": "github:noahtkeller/sass-md-theme",
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "webtorrent": "^1.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  }
+}
